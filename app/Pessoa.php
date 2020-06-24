@@ -11,4 +11,12 @@ class Pessoa extends Model
     //protected $hidden = [];
 
     //protected $casts = [ ];
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+
+    public function setor(){
+        return $this->belongsTo(Setor::class);
+    }
 }

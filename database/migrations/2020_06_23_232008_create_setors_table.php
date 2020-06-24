@@ -14,7 +14,13 @@ class CreateSetorsTable extends Migration
     public function up()
     {
         Schema::create('setors', function (Blueprint $table) {
-            $table->id();
+            $table->id(); //chave primária
+            
+            $table->String('descricao'); 
+            $table->String('area'); 
+            $table->String('tel_setor'); 
+            $table->String('ramal'); 
+
             $table->timestamps();
         });
     }

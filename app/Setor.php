@@ -11,4 +11,8 @@ class Setor extends Model
     //protected $hidden = [];
 
     //protected $casts = [ ];
+
+    public function pessoa(){
+        return $this->hasMany(Pessoa::class);
+    }
 }
