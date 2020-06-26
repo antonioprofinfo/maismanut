@@ -18,7 +18,7 @@ class CreatePessoasTable extends Migration
             $table->bigIncrements('id'); //chave primária
 
             $table->unsignedBigInteger('user_id'); //chave estrangeira user
-            $table->unsignedBigInteger('setor_id'); //chave estrangeira setor
+            $table->unsignedBigInteger('setor_id')->nullable(); //chave estrangeira setor
 
             $table->string('matricula');
             $table->string('funcao');

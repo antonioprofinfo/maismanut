@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Model;
+
+
+
 
 class UsersTableSeeder extends Seeder
 {
@@ -24,9 +28,19 @@ class UsersTableSeeder extends Seeder
         //factory(\App\User::class, 10)->create();
 
         factory(\App\User::class, 40)->create()->each(function($user){
-            $user->pessoa()->save(factory(\App\Pessoa::class)->make());
+             $user->pessoa()->save(factory(\App\Pessoa::class)->make());
 
         });
 
+        // factory(\App\User::class, 10)->create()->each(function($c) {
+        //     for ($i = 0; $i <= 5; $i++){
+        //         $c->setor()->save(factory(\App\Setor::class)->create()->each(function($p){
+        //             $p->pessoa()->save(factory(\App\Pessoa::class)->make());
+        //         }));
+        //     }
+        // });
+
     }
 }
+
+

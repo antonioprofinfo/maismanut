@@ -39,7 +39,26 @@ Route::get('userc', function(){
      ]) ;
 });
 //Buscando dados Pessoa
-Route::get('/cade', function(){
+Route::get('/pessoa', function(){
     $cade = \App\Pessoa::all();
         return $cade; //mudar
 });
+
+Route::get('/pessoa/setor', function(){
+    $enviar = \App\Pessoa::find(1);
+    $enviar->setor_id = 31;
+    return($enviar)->save();
+
+});
+
+
+
+//Buscando dados setorphp
+Route::get('/setor', function(){
+    $setor = \App\Setor::all();
+        return $setor; //mudar
+});
+
+
+
+
