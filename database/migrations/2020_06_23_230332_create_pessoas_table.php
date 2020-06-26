@@ -14,26 +14,28 @@ class CreatePessoasTable extends Migration
     public function up()
     {
         Schema::create('pessoas', function (Blueprint $table) {
-            
-            $table->id(); //chave primária
-            $table->integer('user_id')->unsigned(); //chave estrangeira user 
-            $table->integer('setor_id')->unsigned(); //chave estrangeira setor 
-            
+
+            $table->bigIncrements('id'); //chave primária
+            $table->unsignedBigInteger('user_id'); //chave estrangeira user
+            $table->unsignedBigInteger('setor_id')->unsigned(); //chave estrangeira setor
+
             $table->string('matricula');
             $table->string('nome');
             $table->string('funcao');
             $table->string('tel_fixo');
             $table->string('tel_movel');
 
-            $table->timestamps();    
-            
-            $table->foreign('user_id')->references('id')->on('users')
+            $table->timestamps();
+
+            $table->foreign('setor_id')->references('id')->on('setors')
            ->onUpdate('cascade')
            ->onDelele('cascade');
 
-           $table->foreign('setor_id')->references('id')->on('setors')
-           ->onUpdate('cascade')
-           ->onDelele('cascade');
+            //$table->foreign('user_id')->references('id')->on('users')
+           //->onUpdate('cascade')
+           //->onDelele('cascade');
+
+
 
         });
     }
