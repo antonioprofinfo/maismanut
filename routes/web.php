@@ -37,6 +37,9 @@ Route::get('userc', function(){
         'password' => bcrypt('12345678')
 
      ]) ;
-
 });
-
+//Buscando dados Pessoa
+Route::get('/cade', function(){
+    $cade = \App\Pessoa::all();
+        return $cade;
+});

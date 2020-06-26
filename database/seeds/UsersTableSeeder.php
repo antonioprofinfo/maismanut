@@ -21,7 +21,12 @@ class UsersTableSeeder extends Seeder
     //     ]);
 
         //Cria usuarios fakes
-        factory(\App\User::class, 10)->create();
+        //factory(\App\User::class, 10)->create();
+
+        factory(\App\User::class, 40)->create()->each(function($user){
+            $user->pessoa()->save(factory(\App\Pessoa::class)->make());
+
+        });
 
     }
 }

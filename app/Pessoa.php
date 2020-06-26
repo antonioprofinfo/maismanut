@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Pessoa extends Model
 {
     protected $fillable = [
-        'matricula', 'funcao', 'tel_fixo', 'tel_movel',
+        'setor_id', 'matricula', 'funcao', 'tel_fixo', 'tel_movel',
     ];
 
     //protected $hidden = [];
