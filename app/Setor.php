@@ -6,8 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Setor extends Model
 {
-    //protected $fillable = [];
-   
+    protected $fillable = [
+
+        'descricao', 'area', 'tel_setor', 'ramal',
+    ];
+
     //protected $hidden = [];
 
     //protected $casts = [ ];

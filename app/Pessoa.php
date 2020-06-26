@@ -6,8 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pessoa extends Model
 {
-    //protected $fillable = [];
-   
+    protected $fillable = [
+        'matricula', 'funcao', 'tel_fixo', 'tel_movel',
+    ];
+
     //protected $hidden = [];
 
     //protected $casts = [ ];
