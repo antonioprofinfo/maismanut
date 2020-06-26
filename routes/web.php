@@ -26,7 +26,7 @@ Route::get('/user', function () {
 //Busca todos os dados no banco
 Route::get('/user', function () {
     $user = \App\User::all();
-    return $users;
+    return $user;
 });
 
 //Insere dados no banco na tabela user
