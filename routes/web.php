@@ -26,7 +26,7 @@ Route::get('/user', function () {
 //Busca todos os dados no banco
 Route::get('/user', function () {
     $user = \App\User::all();
-    return $user;
+    return $users;
 });
 
 //Insere dados no banco na tabela user
@@ -41,5 +41,5 @@ Route::get('userc', function(){
 //Buscando dados Pessoa
 Route::get('/cade', function(){
     $cade = \App\Pessoa::all();
-        return $cade;
+        return $cade; //mudar
 });
